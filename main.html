@@ -5,32 +5,50 @@
 		<title>Quiz App</title>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="js/app.js"></script>
 	</head>
 	<body>
-		<div class ="reset">
-			<button class="startover">
-			<p>Start Over</p>
-			</button>
-		</div>
 		<div class ="container">
 			<div class="heading">
 				<h1>Landmark Geography Quiz</h1>
 			</div>
-			<div class="landmark">
-				<img src="http://www.tajmahal.org.uk/gifs/taj-mahal.jpeg" alt="Taj Mahal" style="width:304px;height:228px;">
-				<div class="question1">
-					<h3>Where is the Taj Mahal located?</h3>
-					<form class="quiz">
-						<input type = "radio" name="value">Rome, Italy<br>
-						<input type = "radio" name="value">Scotsdale, Arizona<br>
-						<input type = "radio" name="value">Agra, India<br>
-						<input type = "radio" name="value">Cairo, Egypt<br>
-					</form>
-					<button class="submit">
+			<div class ="begintext">	
+				<h3>Test your knowledge on where to find the world's famous landmarks</h3>
+				<input type="button" id="start" value="Start">
+			</div>
+			<div id="quiz">
+				<div class="landmark">
+				</div>
+				<div id ="question">
+					<h2 id="question1"></h2>
+				</div>
+				<div class="form">
+					<input type = "radio" name="value" value= "1"><span id="option1"></span><br>
+					<input type = "radio" name="value" value= "2"><span id="option2"></span><br>
+					<input type = "radio" name="value" value= "3"><span id="option3"></span><br>
+					<input type = "radio" name="value" value= "4"><span id="option4"></span><br>
+				</div>
+				<div class = "NextQuestion">
+					<button id ="Next">
+					<p>Next</p>
+					</button>
+				</div>
+				<div id = "correctlocation">
+				</div>
+				<div class = "SubmitAnswer">
+					<button id ="Submit">	
 					<p>Submit</p>
+					</button>
+				</div>
+				<div class ="final">
+					<h3 id="finalscore"></h3>
+					<button id = "playagain">
+						<p>Play Again</p>
 					</button>
 				</div>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
 </html>
